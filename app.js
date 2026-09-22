@@ -14,12 +14,12 @@ document.addEventListener('click', e => { if (!e.target.closest('.nav')) setMenu
 $('year').textContent = new Date().getFullYear();
 const device = $('device'), service = $('service'), mode = $('mode'), details = $('details');
 const prices = {
-  maintenance:{pc:800,laptop:900,build:800}, windows:{pc:800,laptop:800,build:800},
-  upgrade:{pc:400,laptop:450,build:400}, clone:{pc:600,laptop:650,build:600},
-  boot:{pc:500,laptop:550,build:500}, gaming:{pc:600,laptop:650,build:600},
-  build:{pc:900,laptop:null,build:900}, obs:{pc:700,laptop:700,build:700},
-  fresh:{pc:850,laptop:null,build:850}, ready:{pc:1500,laptop:null,build:1500},
-  streamer:{pc:1300,laptop:1300,build:1300}
+  maintenance:{pc:500,laptop:600,build:500}, windows:{pc:500,laptop:500,build:500},
+  upgrade:{pc:500,laptop:500,build:500}, clone:{pc:500,laptop:550,build:500},
+  boot:{pc:500,laptop:550,build:500}, gaming:{pc:500,laptop:550,build:500},
+  build:{pc:700,laptop:null,build:700}, obs:{pc:700,laptop:700,build:700},
+  fresh:{pc:650,laptop:null,build:650}, ready:{pc:1000,laptop:null,build:1000},
+  streamer:{pc:700,laptop:700,build:700}
 };
 const physical = new Set(['maintenance','upgrade','clone','boot','build','fresh','ready']);
 const money = value => value == null ? 'Requiere revisión' : `Aprox. desde $${value.toLocaleString('es-MX')} MXN`;
