@@ -14,12 +14,12 @@ document.addEventListener('click', e => { if (!e.target.closest('.nav')) setMenu
 $('year').textContent = new Date().getFullYear();
 const device = $('device'), service = $('service'), mode = $('mode'), details = $('details');
 const prices = {
-  maintenance:{pc:500,laptop:600,build:500}, windows:{pc:500,laptop:500,build:500},
-  upgrade:{pc:500,laptop:500,build:500}, clone:{pc:500,laptop:550,build:500},
-  boot:{pc:500,laptop:550,build:500}, gaming:{pc:500,laptop:550,build:500},
-  build:{pc:700,laptop:null,build:700}, obs:{pc:700,laptop:700,build:700},
-  fresh:{pc:650,laptop:null,build:650}, ready:{pc:1000,laptop:null,build:1000},
-  streamer:{pc:700,laptop:700,build:700}
+  maintenance:{pc:500,laptop:600,console:500,build:500}, windows:{pc:500,laptop:500,console:null,build:500},
+  upgrade:{pc:500,laptop:500,console:null,build:500}, clone:{pc:500,laptop:550,console:null,build:500},
+  boot:{pc:500,laptop:550,console:null,build:500}, gaming:{pc:500,laptop:550,console:null,build:500},
+  build:{pc:700,laptop:null,console:null,build:700}, obs:{pc:700,laptop:700,console:null,build:700},
+  fresh:{pc:650,laptop:null,console:null,build:650}, ready:{pc:1000,laptop:null,console:null,build:1000},
+  streamer:{pc:700,laptop:700,console:null,build:700}
 };
 const physical = new Set(['maintenance','upgrade','clone','boot','build','fresh','ready']);
 const money = value => value == null ? 'Requiere revisión' : `Aprox. desde $${value.toLocaleString('es-MX')} MXN`;
@@ -48,7 +48,7 @@ function showToast(text) {
 }
 [device, service, mode, details].forEach(el => el.addEventListener('input', () => {
   update();
-  $('quoteStatus').textContent = 'No se realizan reparaciones o compras de piezas sin autorización previa.';
+  $('quoteStatus').textContent = 'Todavía no se ha enviado nada. No se compra ni reemplaza ninguna pieza sin tu autorización.';
 }));
 $('quoteForm').addEventListener('submit', async e => {
   e.preventDefault(); update();

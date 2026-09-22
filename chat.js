@@ -16,37 +16,43 @@ let draft={};
 const equipmentOptions=[
   {label:'Laptop',value:'Laptop'},
   {label:'PC de escritorio',value:'PC'},
+  {label:'Consola de videojuegos',value:'Consola'},
   {label:'Ensamblaje de un nuevo equipo',value:'Nuevo equipo'}
 ];
 const serviceCatalog={
   Laptop:[
     {label:'No enciende o presenta una falla',value:'Diagnóstico',problem:true,price:550},
-    {label:'Está lenta o se calienta',value:'Rendimiento / temperatura',problem:true,price:900},
-    {label:'Windows o programas fallan',value:'Windows / software',problem:true,price:800},
-    {label:'Necesita mantenimiento',value:'Mantenimiento',problem:false,price:900},
-    {label:'Mejorar componentes',value:'Upgrade',problem:false,price:450},
-    {label:'Gaming: bajos FPS o cierres',value:'Optimización gaming',problem:true,price:650},
-    {label:'Asesoría de cómputo',value:'Asesoría de cómputo',problem:false,price:400},
+    {label:'Está lenta o se calienta',value:'Rendimiento / temperatura',problem:true,price:600},
+    {label:'Windows o programas fallan',value:'Windows / software',problem:true,price:500},
+    {label:'Necesita mantenimiento',value:'Mantenimiento',problem:false,price:600},
+    {label:'Mejorar componentes',value:'Upgrade',problem:false,price:500},
+    {label:'Gaming: bajos FPS o cierres',value:'Optimización gaming',problem:true,price:550},
+    {label:'Asesoría de cómputo',value:'Asesoría de cómputo',problem:false,price:500},
     {label:'Asesoría de programación',value:'Asesoría de programación',problem:false,price:500}
   ],
   PC:[
     {label:'No enciende o presenta una falla',value:'Diagnóstico',problem:true,price:500},
-    {label:'Está lenta o se calienta',value:'Rendimiento / temperatura',problem:true,price:800},
-    {label:'Windows o programas fallan',value:'Windows / software',problem:true,price:800},
-    {label:'Necesita mantenimiento',value:'Mantenimiento',problem:false,price:800},
-    {label:'Mejorar componentes',value:'Upgrade',problem:false,price:400},
-    {label:'Gaming: bajos FPS o cierres',value:'Optimización gaming',problem:true,price:600},
+    {label:'Está lenta o se calienta',value:'Rendimiento / temperatura',problem:true,price:500},
+    {label:'Windows o programas fallan',value:'Windows / software',problem:true,price:500},
+    {label:'Necesita mantenimiento',value:'Mantenimiento',problem:false,price:500},
+    {label:'Mejorar componentes',value:'Upgrade',problem:false,price:500},
+    {label:'Gaming: bajos FPS o cierres',value:'Optimización gaming',problem:true,price:500},
     {label:'Configurar OBS o streaming',value:'OBS / streaming',problem:false,price:700},
-    {label:'Asesoría de cómputo',value:'Asesoría de cómputo',problem:false,price:400},
+    {label:'Asesoría de cómputo',value:'Asesoría de cómputo',problem:false,price:500},
     {label:'Asesoría de programación',value:'Asesoría de programación',problem:false,price:500}
   ],
+  Consola:[
+    {label:'Limpieza y pasta térmica',value:'Mantenimiento de consola',problem:false,price:500},
+    {label:'Se calienta o hace mucho ruido',value:'Temperatura / ventilación',problem:true,price:500},
+    {label:'Revisión de ajustes básicos',value:'Ajustes básicos de consola',problem:false,price:500}
+  ],
   'Nuevo equipo':[
-    {label:'Ensamblaje completo',value:'Ensamblaje completo',problem:false,price:900},
-    {label:'Cotización de componentes',value:'Cotización de componentes',problem:false,price:350},
-    {label:'Investigación y comparación',value:'Investigación de componentes',problem:false,price:400},
-    {label:'Validar compatibilidad',value:'Validación de compatibilidad',problem:false,price:350},
-    {label:'Asesoría de compra',value:'Asesoría de compra',problem:false,price:400},
-    {label:'Ensamblaje de setup gaming',value:'Ensamblaje de setup gaming',problem:false,price:1200}
+    {label:'Ensamblaje completo',value:'Ensamblaje completo',problem:false,price:700},
+    {label:'Cotización de componentes',value:'Cotización de componentes',problem:false,price:500},
+    {label:'Investigación y comparación',value:'Investigación de componentes',problem:false,price:500},
+    {label:'Validar compatibilidad',value:'Validación de compatibilidad',problem:false,price:500},
+    {label:'Asesoría de compra',value:'Asesoría de compra',problem:false,price:500},
+    {label:'PC para trabajo, estudio o gaming',value:'PC a la medida',problem:false,price:700}
   ]
 };
 
@@ -87,9 +93,9 @@ function accountChoice(){
   return session?{label:'Mis tickets',action:()=>window.DescoAccount.open('login')}:{label:'Vincular o crear cuenta',action:()=>window.DescoAccount?.open('register')};
 }
 function mainMenu(greeting=true){
-  if(greeting)addMessage('Hola, soy Nova, la asistente virtual de DescoTech. Te ayudo a revisar tu caso, obtener una cotización inicial y solicitar un horario.');
+  if(greeting)addMessage('Hola, soy Nova. Cuéntame qué está haciendo tu equipo y te ayudaré a preparar una cotización inicial y solicitar un horario.');
   showChoices([
-    {label:'Agendar y cotizar',action:startQuote},
+    {label:'Quiero revisar mi equipo',action:startQuote},
     {label:'Consultar mi folio',action:checkRequest},
     {label:'Ver precios',action:showPrices},
     accountChoice()
@@ -97,7 +103,7 @@ function mainMenu(greeting=true){
 }
 function startQuote(){
   draft={};
-  askInput('Empecemos. ¿Cómo te llamas?','Tu nombre',value=>{
+  askInput('Perfecto. Para registrar la solicitud, ¿cómo te llamas?','Tu nombre',value=>{
     draft.name=value.trim().slice(0,60);askPhone();
   },{validate:value=>value.trim().length>=2,error:'Escribe al menos dos letras de tu nombre.'});
 }
@@ -107,11 +113,11 @@ function askPhone(){
   },{type:'tel',inputMode:'tel',validate:value=>phoneDigits(value).length>=10&&phoneDigits(value).length<=15,error:'Escribe un número válido de 10 a 15 dígitos.'});
 }
 function askEquipment(){
-  addMessage('¿Qué tipo de equipo necesitas revisar?');
+  addMessage('¿Qué equipo vamos a revisar?');
   showChoices(equipmentOptions.map(option=>({label:option.label,action:()=>chooseEquipment(option)})));
 }
 function chooseEquipment(option){
-  draft.device=option.value;addMessage(option.value==='Nuevo equipo'?'¿Qué necesitas para tu nuevo equipo?':'Selecciona la opción que mejor describe lo que necesitas.');
+  draft.device=option.value;addMessage(option.value==='Nuevo equipo'?'¿Qué te gustaría hacer con tu nuevo equipo?':'¿Cuál opción se parece más a lo que está pasando?');
   showChoices(serviceCatalog[option.value].map(service=>({label:service.label,action:()=>chooseService(service)})));
 }
 function chooseService(option){draft.service=option.value;draft.serviceValue=option.price;draft.isProblem=option.problem;if(option.problem)askDuration();else askSummary()}
@@ -132,7 +138,7 @@ function askSummary(){
     {validate:value=>value.trim().length>=10,error:'Agrega un poco más de información, al menos 10 caracteres.'});
 }
 function askDate(){
-  addMessage('¿Qué día prefieres para la revisión? La cita quedará solicitada hasta que el administrador la confirme.');
+  addMessage('¿Qué día te viene mejor? El horario quedará solicitado y te confirmaremos la disponibilidad después de revisar el caso.');
   showChoices([
     {label:`Hoy · ${formatDate(dateISO(0))}`,action:()=>setDate(dateISO(0))},
     {label:`Mañana · ${formatDate(dateISO(1))}`,action:()=>setDate(dateISO(1))},
@@ -154,7 +160,7 @@ function setDate(value){
 function setTime(value){draft.appointmentTime=value;showSummary()}
 function showSummary(){
   const duration=draft.issueDuration?`\nTiempo con la falla: ${draft.issueDuration}`:'';
-  addMessage(`Revisa tu solicitud:\n\nNombre: ${draft.name}\nTeléfono: ${draft.phone}\nEquipo: ${draft.device}\nServicio: ${draft.service}${duration}\nResumen: ${draft.details}\nDía: ${formatDate(draft.appointmentDate)}\nHorario: ${draft.appointmentTime}\nCotización inicial: ${estimate()}\n\nEl precio y la cita se confirman después de revisar la solicitud.`);
+  addMessage(`Así quedaría tu solicitud:\n\nNombre: ${draft.name}\nTeléfono: ${draft.phone}\nEquipo: ${draft.device}\nServicio: ${draft.service}${duration}\nResumen: ${draft.details}\nDía: ${formatDate(draft.appointmentDate)}\nHorario: ${draft.appointmentTime}\nCotización inicial: ${estimate()}\n\nNada se compra o reemplaza sin tu autorización. El precio y la cita se confirman después de revisar el caso.`);
   showChoices([{label:'Confirmar solicitud',action:saveRequest},{label:'Volver a empezar',action:startQuote}]);
 }
 function saveRequest(){
@@ -189,8 +195,8 @@ function showRequest(id){
   showChoices([{label:'Actualizar estado',action:()=>showRequest(id)},{label:'Menú principal',action:()=>mainMenu(false)}]);
 }
 function showPrices(){
-  addMessage('Precios iniciales:\n• Mantenimiento PC: aprox. desde $800\n• Mantenimiento laptop: aprox. desde $900\n• Windows: aprox. desde $800\n• Upgrades: aprox. desde $400\n• Diagnóstico: aprox. desde $500\n• Optimización gaming: aprox. desde $600\n• Ensamblaje de equipo: aprox. desde $900\n• Asesoría técnica: aprox. desde $400\n\nEl precio final depende del equipo, la falla, el alcance y las piezas necesarias.');
-  showChoices([{label:'Agendar y cotizar',action:startQuote},{label:'Menú principal',action:()=>mainMenu(false)}]);
+  addMessage('Precios de lanzamiento:\n• Mantenimiento PC: aprox. desde $500\n• Mantenimiento laptop: aprox. desde $600\n• Mantenimiento de consola: aprox. desde $500\n• Windows: aprox. desde $500\n• Upgrades: aprox. desde $500\n• Diagnóstico: aprox. desde $500\n• Optimización gaming: aprox. desde $500\n• PC a la medida: aprox. desde $700\n• Asesoría técnica: aprox. desde $500\n\nSon puntos de partida. Antes de trabajar te confirmamos el alcance, el precio y cualquier pieza necesaria. En consolas no realizamos soldaduras ni reparación de placas.');
+  showChoices([{label:'Quiero revisar mi equipo',action:startQuote},{label:'Menú principal',action:()=>mainMenu(false)}]);
 }
 function resetChat(){draft={};finishInput();chatMessages.replaceChildren();chatChoices.replaceChildren();mainMenu()}
 function openChat(){
