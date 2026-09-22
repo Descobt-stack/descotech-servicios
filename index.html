@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="DescoTech: mantenimiento, reparación, optimización, ensamblaje de equipos, upgrades, Windows y asesoría técnica.">
+  <title>DescoTech | PC · Gaming · IT</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23087bc3'/%3E%3Cpath d='M0 52h64v12H0z' fill='%2342bd86'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial' font-size='24' font-weight='700' fill='white'%3EDT%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=2.3">
+</head>
+<body>
+  <a class="skipLink" href="#main">Saltar al contenido</a>
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="#inicio" aria-label="DescoTech inicio">
+        <span class="logo">DT</span>
+        <span><strong>DescoTech</strong><small>PC · GAMING · IT</small></span>
+      </a>
+      <button class="menu" id="menuBtn" aria-label="Abrir menú" aria-controls="navLinks" aria-expanded="false">☰</button>
+      <nav id="navLinks" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#galeria">Galería</a>
+        <a href="#cotizador">Cotizador</a>
+        <a href="#faq">FAQ</a>
+        <button class="navAccount" id="accountButton" type="button" data-open-account>Mi cuenta</button>
+        <button class="navChat" type="button" data-open-chat>Chat</button>
+        <a class="navCta" href="#contacto">Cotizar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="inicio">
+      <div class="shell heroGrid">
+        <div class="heroCopy">
+          <div class="eyebrow">SOPORTE TÉCNICO · PC GAMER · STREAMING</div>
+          <h1>Tu PC.<br>A punto para<br><span>lo que sigue.</span></h1>
+          <p class="lead">Mantenimiento, reparación y mejoras para trabajar, jugar y transmitir. Atención clara, desde el diagnóstico hasta la puesta a punto.</p>
+          <div class="heroActions">
+            <button class="btn primary" type="button" data-open-chat>Agendar y cotizar</button>
+            <a class="btn ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="trustRow">
+            <span>✓ Diagnóstico claro</span>
+            <span>✓ Trabajo documentado</span>
+            <span>✓ Atención local y remota</span>
+          </div>
+        </div>
+
+        <figure class="heroVisual">
+          <img src="img/hero-pc.webp" srcset="img/hero-pc-small.webp 640w, img/hero-pc.webp 1280w" sizes="(max-width: 900px) 100vw, 52vw" width="1280" height="720" fetchpriority="high" alt="Ilustración de un técnico instalando componentes en una PC">
+          <figcaption><span>HARDWARE · SOFTWARE · STREAMING</span><strong>Cuida tu equipo.<br>Disfruta lo que haces.</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section shell" id="servicios">
+      <div class="sectionHead">
+        <div>
+          <div class="eyebrow">SERVICIOS</div>
+          <h2>Soluciones para tu equipo.</h2>
+        </div>
+        <p>Precios aproximados según el servicio. El costo final se confirma después del diagnóstico.</p>
+      </div>
+
+      <div class="serviceGrid">
+        <article class="serviceCard">
+          <span class="serviceIcon">01</span>
+          <h3>Mantenimiento PC</h3>
+          <p>Limpieza interna, revisión visual, ventiladores y cambio de pasta térmica.</p>
+          <strong>Aprox. desde $800 MXN</strong>
+        </article>
+        <article class="serviceCard">
+          <span class="serviceIcon">02</span>
+          <h3>Mantenimiento Laptop</h3>
+          <p>Limpieza interna, sistema de refrigeración y cambio de pasta térmica.</p>
+          <strong>Aprox. desde $900 MXN</strong>
+        </article>
+        <article class="serviceCard">
+          <span class="serviceIcon">03</span>
+          <h3>Windows & Software</h3>
+          <p>Instalación limpia, drivers, actualizaciones y configuración inicial.</p>
+          <strong>Aprox. desde $800 MXN</strong>
+        </article>
+        <article class="serviceCard">
+          <span class="serviceIcon">04</span>
+          <h3>SSD, RAM & Upgrades</h3>
+          <p>Instalación de componentes, compatibilidad y validación de funcionamiento.</p>
+          <strong>Aprox. desde $400 MXN</strong>
+        </article>
+        <article class="serviceCard">
+          <span class="serviceIcon">05</span>
+          <h3>Clonación de disco</h3>
+          <p>Migración de Windows y datos a SSD/HDD nuevo, cuando el sistema lo permite.</p>
+          <strong>Aprox. desde $600 MXN</strong>
+        </article>
+        <article class="serviceCard">
+          <span class="serviceIcon">06</span>
+          <h3>PC que no inicia</h3>
+          <p>Diagnóstico de arranque, almacenamiento, Windows, BIOS/UEFI y componentes.</p>
+          <strong>Aprox. desde $500 MXN</strong>
+        </article>
+        <article class="serviceCard featured">
+          <span class="serviceIcon">07</span>
+          <h3>Optimización Gaming</h3>
+          <p>Temperaturas, procesos, drivers, energía y configuración para mejorar estabilidad.</p>
+          <strong>Aprox. desde $600 MXN</strong>
+        </article>
+        <article class="serviceCard featured">
+          <span class="serviceIcon">08</span>
+          <h3>Ensamblaje de equipo gaming</h3>
+          <p>Cotización, compatibilidad, ensamble, cableado, BIOS y validación de hardware.</p>
+          <strong>Aprox. desde $900 MXN</strong>
+        </article>
+        <article class="serviceCard featured">
+          <span class="serviceIcon">09</span>
+          <h3>Asesoría técnica</h3>
+          <p>Orientación de cómputo, programación, compatibilidad, compras y configuración.</p>
+          <strong>Aprox. desde $400 MXN</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section packages" id="paquetes">
+      <div class="shell">
+        <div class="sectionHead">
+          <div>
+            <div class="eyebrow">PAQUETES</div>
+            <h2>Más completo, mejor precio.</h2>
+          </div>
+          <p>Elige una base y personalizamos el servicio según tu hardware y lo que realmente necesites.</p>
+        </div>
+
+        <div class="packageGrid">
+          <article class="package">
+            <div class="packageLabel">MANTENIMIENTO</div>
+            <h3>PC Fresh</h3>
+            <div class="price"><small>APROX.</small> $850 <small>MXN</small></div>
+            <ul>
+              <li>Limpieza interna</li>
+              <li>Pasta térmica</li>
+              <li>Revisión de ventiladores</li>
+              <li>Chequeo básico de temperaturas</li>
+            </ul>
+            <button class="selectPackage" data-package="PC Fresh">Cotizar paquete</button>
+          </article>
+
+          <article class="package recommended">
+            <div class="recommendTag">POPULAR</div>
+            <div class="packageLabel">GAMING</div>
+            <h3>Gamer Ready</h3>
+            <div class="price"><small>APROX.</small> $1,500 <small>MXN</small></div>
+            <ul>
+              <li>Mantenimiento completo</li>
+              <li>Drivers principales</li>
+              <li>Revisión de temperaturas</li>
+              <li>Optimización gaming</li>
+              <li>Pruebas de estabilidad</li>
+            </ul>
+            <button class="selectPackage" data-package="Gamer Ready">Cotizar paquete</button>
+          </article>
+
+          <article class="package">
+            <div class="packageLabel">STREAMING</div>
+            <h3>Streamer Setup</h3>
+            <div class="price"><small>APROX.</small> $1,300 <small>MXN</small></div>
+            <ul>
+              <li>Configuración de OBS</li>
+              <li>Micrófono y filtros</li>
+              <li>Separación básica de audio</li>
+              <li>Escenas y fuentes</li>
+              <li>Prueba de transmisión</li>
+            </ul>
+            <button class="selectPackage" data-package="Streamer Setup">Cotizar paquete</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="galeria">
+      <div class="sectionHead"><div><div class="eyebrow">PC · LAPTOP · SETUP</div><h2>Cada equipo tiene<br>su siguiente nivel.</h2></div><p>Desde una limpieza a fondo hasta un setup listo para transmitir. Imágenes ilustrativas de los servicios.</p></div>
+      <div class="galleryGrid">
+        <figure class="galleryCard"><img src="img/limpieza-pc.webp" srcset="img/limpieza-pc-small.webp 640w, img/limpieza-pc.webp 1280w" sizes="(max-width: 680px) 100vw, 50vw" width="1280" height="720" loading="lazy" decoding="async" alt="Ilustración: Limpieza y refrigeración para tu PC."><figcaption><h3>Mantenimiento a fondo</h3><p>Limpieza y refrigeración para tu PC.</p></figcaption></figure>
+        <figure class="galleryCard"><img src="img/laptop-repair.webp" srcset="img/laptop-repair-small.webp 640w, img/laptop-repair.webp 1280w" sizes="(max-width: 680px) 100vw, 50vw" width="1280" height="720" loading="lazy" decoding="async" alt="Ilustración: Revisión interna y mejoras de hardware."><figcaption><h3>Tu laptop, en buenas manos</h3><p>Revisión interna y mejoras de hardware.</p></figcaption></figure>
+        <figure class="galleryCard"><img src="img/streaming-setup.webp" srcset="img/streaming-setup-small.webp 640w, img/streaming-setup.webp 1280w" sizes="(max-width: 680px) 100vw, 50vw" width="1280" height="720" loading="lazy" decoding="async" alt="Ilustración: Configuración de OBS, escenas y audio."><figcaption><h3>Tu espacio para crear</h3><p>Configuración de OBS, escenas y audio.</p></figcaption></figure>
+        <figure class="galleryCard"><img src="img/pc-premium.webp" srcset="img/pc-premium-small.webp 640w, img/pc-premium.webp 1280w" sizes="(max-width: 680px) 100vw, 50vw" width="1280" height="720" loading="lazy" decoding="async" alt="Ilustración: Ensamble, compatibilidad y puesta a punto."><figcaption><h3>Una PC a tu medida</h3><p>Ensamble, compatibilidad y puesta a punto.</p></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section shell" id="cotizador">
+      <div class="quoteWrap">
+        <div class="quoteIntro">
+          <div class="eyebrow">COTIZADOR RÁPIDO</div>
+          <h2>Cuéntame qué necesita tu equipo.</h2>
+          <p>Genera una solicitud clara en menos de un minuto. El precio mostrado es orientativo y puede cambiar después del diagnóstico.</p>
+          <div class="quoteBadge">
+            <strong id="estimate" aria-live="polite">Aprox. desde $800 MXN</strong>
+            <span>estimado inicial</span>
+          </div>
+        </div>
+
+        <form id="quoteForm" class="quoteForm">
+          <label>
+            Tipo de equipo
+            <select id="device">
+              <option value="pc">PC de escritorio</option>
+              <option value="laptop">Laptop</option>
+              <option value="build">Ensamblaje de nuevo equipo</option>
+            </select>
+          </label>
+
+          <label>
+            ¿Qué necesitas?
+            <select id="service">
+              <option value="maintenance">Mantenimiento / limpieza</option>
+              <option value="windows">Windows / formateo</option>
+              <option value="upgrade">Instalar SSD / RAM / GPU</option>
+              <option value="clone">Clonar disco</option>
+              <option value="boot">No inicia / falla de Windows</option>
+              <option value="gaming">Optimización gaming</option>
+              <option value="build">Ensamblaje completo de equipo</option>
+              <option value="obs">OBS / streaming</option>
+              <optgroup label="Paquetes"><option value="fresh">Paquete PC Fresh</option><option value="ready">Paquete Gamer Ready</option><option value="streamer">Paquete Streamer Setup</option></optgroup>
+            </select>
+          </label>
+
+          <label>
+            Modalidad
+            <select id="mode">
+              <option value="local">Presencial</option>
+              <option value="remote">Remoto (si aplica)</option>
+            </select>
+          </label>
+
+          <label>
+            Cuéntame brevemente el problema
+            <textarea id="details" rows="4" maxlength="500" placeholder="Ej. Mi PC se apaga jugando, llega a 90 °C y nunca se le ha cambiado la pasta térmica."></textarea>
+          </label>
+
+          <div class="formActions">
+            <button type="submit" class="btn primary" id="copyQuote">Generar y copiar solicitud</button>
+            <a class="btn ghost" id="whatsappBtn" href="#" hidden>Enviar por WhatsApp</a>
+          </div>
+          <div class="quoteResult" id="quoteResult" hidden><label for="quoteText">Tu solicitud, lista para enviar</label><textarea id="quoteText" rows="10" readonly></textarea><p class="formNote">Puedes copiarla y enviarla por tu app de mensajería. Generarla no la envía automáticamente.</p></div>
+          <p class="formNote" id="quoteStatus" aria-live="polite">No se realizan reparaciones o compras de piezas sin autorización previa.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section faqSection" id="faq">
+      <div class="shell narrow">
+        <div class="sectionHead">
+          <div>
+            <div class="eyebrow">PREGUNTAS FRECUENTES</div>
+            <h2>Antes de traer tu equipo.</h2>
+          </div>
+        </div>
+
+        <details>
+          <summary>¿Trabajas con PCs gamer?</summary>
+          <p>Sí. Se pueden revisar temperaturas, estabilidad, drivers, upgrades, ensamble y configuración general orientada a gaming.</p>
+        </details>
+        <details>
+          <summary>¿El precio mostrado es definitivo?</summary>
+          <p>No. Es un aproximado desde el que sirve como referencia. El precio final se confirma al revisar el equipo, el alcance y las piezas necesarias.</p>
+        </details>
+        <details>
+          <summary>¿La cita queda confirmada al crear el ticket?</summary>
+          <p>La fecha y el horario quedan solicitados. El administrador debe revisar el caso y confirmar la disponibilidad.</p>
+        </details>
+        <details>
+          <summary>¿Necesito crear una cuenta?</summary>
+          <p>No es obligatorio, pero una cuenta te permite recordar y consultar todos tus tickets desde un solo lugar en este dispositivo.</p>
+        </details>
+        <details>
+          <summary>¿Cómo protegen mi número de teléfono?</summary>
+          <p>Se usa para atender la solicitud y no se muestra públicamente. El contacto directo de DescoTech solo se habilita cuando el administrador aprueba el caso.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section shell" id="contacto">
+      <div class="contactCard">
+        <div>
+          <div class="eyebrow">CONTACTO</div>
+          <h2>¿Listo para revisar tu PC?</h2>
+          <p>El asistente prepara una cotización inicial, registra tu teléfono y solicita el día y horario que prefieres. Después revisamos y confirmamos la cita.</p>
+        </div>
+        <div class="contactActions">
+          <button class="btn primary" type="button" data-open-chat>Iniciar chat</button>
+          <a class="btn ghost" href="https://www.linkedin.com/in/josue-villarruel-flores-bb571436a/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footerInner">
+      <div>
+        <strong>DescoTech</strong>
+        <span>PC · Gaming · IT</span>
+      </div>
+      <div>Servicio técnico independiente · <span id="year">2026</span> · v2.4 · <a href="https://descobt-stack.github.io/portfolio-josue/" target="_blank" rel="noopener noreferrer">Portafolio ↗</a></div>
+    </div>
+  </footer>
+
+  <button class="chatLauncher" id="chatLauncher" type="button" aria-label="Abrir asistente virtual" aria-controls="chatPanel" aria-expanded="false">
+    <span class="chatLauncherIcon" aria-hidden="true">✦</span>
+    <span>Agendar servicio</span>
+    <span class="chatPulse" aria-hidden="true"></span>
+  </button>
+
+  <section class="chatPanel" id="chatPanel" aria-label="Asistente virtual de DescoTech" aria-hidden="true" hidden>
+    <header class="chatHeader">
+      <div class="chatAvatar" aria-hidden="true">DT</div>
+      <div><strong>Asistente DescoTech</strong><span><i></i> Respuestas automáticas</span></div>
+      <button class="chatClose" id="chatClose" type="button" aria-label="Cerrar chat">×</button>
+    </header>
+    <div class="chatNotice">Asistente virtual · Tus datos permanecen en este dispositivo durante esta demostración.</div>
+    <div class="chatMessages" id="chatMessages" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <div class="chatChoices" id="chatChoices"></div>
+    <form class="chatComposer" id="chatComposer" hidden>
+      <label class="srOnly" for="chatInput">Escribe tu respuesta</label>
+      <input id="chatInput" type="text" maxlength="500" autocomplete="off" placeholder="Escribe aquí…">
+      <button type="submit" aria-label="Enviar respuesta">➜</button>
+    </form>
+    <button class="chatRestart" id="chatRestart" type="button">Reiniciar conversación</button>
+  </section>
+
+  <dialog class="accountDialog" id="accountDialog">
+    <div class="accountShell">
+      <header class="accountHeader">
+        <div><span class="accountLogo">DT</span><div><strong>Cuenta DescoTech</strong><small>Tickets y seguimiento</small></div></div>
+        <button id="accountClose" type="button" aria-label="Cerrar cuenta">×</button>
+      </header>
+      <div class="accountDemo">Demostración local · Usa una contraseña exclusiva de prueba.</div>
+      <p class="accountStatus" id="accountStatus" aria-live="polite"></p>
+
+      <section id="accountGuest">
+        <div class="accountTabs" role="tablist" aria-label="Acceso a cuenta">
+          <button class="active" type="button" role="tab" data-auth-view="login">Ingresar</button>
+          <button type="button" role="tab" data-auth-view="register">Crear cuenta</button>
+          <button type="button" role="tab" data-auth-view="recover">Olvidé mi contraseña</button>
+        </div>
+        <form class="accountForm" id="loginForm" data-auth-panel="login">
+          <label>Correo electrónico<input id="loginEmail" type="email" autocomplete="email" required></label>
+          <label>Contraseña<input id="loginPassword" type="password" autocomplete="current-password" minlength="6" required></label>
+          <button class="btn primary" type="submit">Ingresar a mis tickets</button>
+        </form>
+        <form class="accountForm" id="registerForm" data-auth-panel="register" hidden>
+          <label>Nombre<input id="registerName" type="text" autocomplete="name" minlength="2" required></label>
+          <label>Correo electrónico<input id="registerEmail" type="email" autocomplete="email" required></label>
+          <label>Contraseña de prueba<input id="registerPassword" type="password" autocomplete="new-password" minlength="6" required></label>
+          <small>Mínimo 6 caracteres. No uses la misma contraseña de tu correo o redes.</small>
+          <button class="btn primary" type="submit">Crear mi cuenta</button>
+        </form>
+        <form class="accountForm" id="recoverForm" data-auth-panel="recover" hidden>
+          <p>En la versión final se enviará un enlace seguro a tu correo. En esta demostración comprobaremos que la cuenta existe.</p>
+          <label>Correo de la cuenta<input id="recoverEmail" type="email" autocomplete="email" required></label>
+          <button class="btn primary" type="submit">Solicitar recuperación</button>
+        </form>
+      </section>
+
+      <section class="memberPanel" id="accountMember" hidden>
+        <div class="memberWelcome"><div><span>MI CUENTA</span><h2 id="memberName">Hola</h2><p id="memberEmail"></p></div><button id="logoutButton" type="button">Cerrar sesión</button></div>
+        <div class="memberActions"><button class="btn primary" type="button" data-open-chat>Crear nuevo ticket</button></div>
+        <div class="ticketHeading"><div><h3>Mis tickets</h3><p>Solicitudes asociadas a esta cuenta.</p></div><span id="memberTicketCount">0</span></div>
+        <div class="memberTickets" id="memberTickets"></div>
+        <details class="linkTicket"><summary>Vincular un ticket anterior</summary><form id="linkTicketForm"><label>Folio<input id="linkTicketId" type="text" placeholder="DT-12345" required></label><label>Teléfono usado<input id="linkTicketPhone" type="tel" inputmode="tel" required></label><button type="submit">Vincular ticket</button></form></details>
+      </section>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js?v=2.3" defer></script>
+  <script src="account.js?v=2.3" defer></script>
+  <script src="chat.js?v=2.3" defer></script>
+</body>
+</html>
