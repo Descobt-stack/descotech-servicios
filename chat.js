@@ -87,7 +87,7 @@ function accountChoice(){
   return session?{label:'Mis tickets',action:()=>window.DescoAccount.open('login')}:{label:'Vincular o crear cuenta',action:()=>window.DescoAccount?.open('register')};
 }
 function mainMenu(greeting=true){
-  if(greeting)addMessage('Hola, soy el asistente virtual de DescoTech. Te ayudo a revisar tu caso, obtener una cotización inicial y solicitar un horario.');
+  if(greeting)addMessage('Hola, soy Nova, la asistente virtual de DescoTech. Te ayudo a revisar tu caso, obtener una cotización inicial y solicitar un horario.');
   showChoices([
     {label:'Agendar y cotizar',action:startQuote},
     {label:'Consultar mi folio',action:checkRequest},
