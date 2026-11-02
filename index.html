@@ -7,7 +7,7 @@
   <meta name="description" content="Soporte técnico en Guadalajara para PC, laptop, gaming y streaming. Diagnóstico claro, precios aproximados y autorización antes de trabajar.">
   <title>DescoTech | PC · Gaming · IT</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23087bc3'/%3E%3Cpath d='M0 52h64v12H0z' fill='%2342bd86'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial' font-size='24' font-weight='700' fill='white'%3EDT%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=2.7">
+  <link rel="stylesheet" href="styles.css?v=2.8">
 </head>
 <body>
   <a class="skipLink" href="#main">Saltar al contenido</a>
@@ -61,7 +61,7 @@
           <div class="eyebrow">SERVICIOS</div>
           <h2>Lo que podemos resolver.</h2>
         </div>
-        <p>Cada equipo y cada falla son diferentes. Estos precios sirven como punto de partida; antes de trabajar te confirmo qué necesita y cuánto costará.</p>
+        <p>Cada equipo y cada falla son diferentes. Estos precios sirven como punto de partida; antes de trabajar te confirmo qué necesita y cuánto costará. Las licencias de software se cotizan por separado.</p>
       </div>
 
       <div class="serviceGrid">
@@ -79,48 +79,60 @@
         </article>
         <article class="serviceCard">
           <span class="serviceIcon">03</span>
-          <h3>Windows & Software</h3>
-          <p>Si está lenta, falla o necesita empezar de cero, dejamos Windows, drivers y actualizaciones listos.</p>
+          <h3>Windows, drivers y configuración</h3>
+          <p>Dejamos Windows, controladores, actualizaciones y ajustes básicos listos para usar.</p>
           <strong>Aprox. desde $500 MXN</strong>
         </article>
-        <article class="serviceCard">
+        <article class="serviceCard featured">
           <span class="serviceIcon">04</span>
+          <h3>Office / Microsoft 365</h3>
+          <p>Instalación, inicio de sesión, actualizaciones y comprobación básica de Word, Excel y PowerPoint. La licencia no está incluida.</p>
+          <strong>Aprox. desde $350 MXN</strong>
+        </article>
+        <article class="serviceCard featured">
+          <span class="serviceIcon">05</span>
+          <h3>AutoCAD y software especializado</h3>
+          <p>Instalación y configuración inicial de AutoCAD u otro programa profesional con licencia válida del cliente. La licencia no está incluida.</p>
+          <strong>Aprox. desde $650 MXN</strong>
+        </article>
+        <article class="serviceCard">
+          <span class="serviceIcon">06</span>
           <h3>SSD, RAM & Upgrades</h3>
           <p>Revisamos compatibilidad, instalamos el componente y comprobamos que todo quede funcionando correctamente.</p>
           <strong>Aprox. desde $500 MXN</strong>
         </article>
         <article class="serviceCard">
-          <span class="serviceIcon">05</span>
+          <span class="serviceIcon">07</span>
           <h3>Clonación de disco</h3>
           <p>Pasamos Windows y tus archivos al disco nuevo cuando el estado del sistema permite una migración segura.</p>
           <strong>Aprox. desde $500 MXN</strong>
         </article>
         <article class="serviceCard">
-          <span class="serviceIcon">06</span>
+          <span class="serviceIcon">08</span>
           <h3>PC que no inicia</h3>
           <p>Buscamos la causa real antes de recomendar una reparación o el cambio de alguna pieza.</p>
           <strong>Aprox. desde $500 MXN</strong>
         </article>
         <article class="serviceCard featured">
-          <span class="serviceIcon">07</span>
+          <span class="serviceIcon">09</span>
           <h3>Optimización Gaming</h3>
           <p>Revisamos temperaturas, procesos, drivers y estabilidad para reducir tirones y aprovechar mejor tu hardware.</p>
           <strong>Aprox. desde $500 MXN</strong>
         </article>
         <article class="serviceCard featured">
-          <span class="serviceIcon">08</span>
+          <span class="serviceIcon">10</span>
           <h3>PC a tu medida</h3>
           <p>Elegimos piezas compatibles y armamos una computadora acorde a tu necesidad: trabajo, estudio o gaming.</p>
           <strong>Aprox. desde $700 MXN</strong>
         </article>
         <article class="serviceCard featured">
-          <span class="serviceIcon">09</span>
+          <span class="serviceIcon">11</span>
           <h3>Asesoría técnica</h3>
           <p>Antes de comprar o actualizar, revisamos qué opción te conviene para no gastar de más.</p>
           <strong>Aprox. desde $500 MXN</strong>
         </article>
         <article class="serviceCard">
-          <span class="serviceIcon">10</span>
+          <span class="serviceIcon">12</span>
           <h3>Mantenimiento de consola</h3>
           <p>Limpieza interna, cambio de pasta térmica y ajustes básicos. No realizamos soldaduras ni reparaciones de placa.</p>
           <strong>Aprox. desde $500 MXN</strong>
@@ -221,6 +233,7 @@
           <div class="eyebrow">CUÉNTAME TU CASO</div>
           <h2>¿Qué está haciendo tu equipo?</h2>
           <p>Elige lo más parecido a tu problema y agrega los detalles que recuerdes. Nova preparará una solicitud para revisarla contigo.</p>
+          <p class="formNote">La instalación es mano de obra. Office, Microsoft 365, AutoCAD y otros programas requieren una licencia válida, que no está incluida en estos precios.</p>
           <div class="quoteBadge">
             <strong id="estimate" aria-live="polite">Aprox. desde $500 MXN</strong>
             <span>estimado inicial</span>
@@ -242,7 +255,9 @@
             ¿Qué necesitas?
             <select id="service">
               <option value="maintenance">Mantenimiento / limpieza</option>
-              <option value="windows">Windows / formateo</option>
+              <option value="windows">Windows / formateo / configuración</option>
+              <option value="office">Instalación de Office / Microsoft 365</option>
+              <option value="autocad">Instalación de AutoCAD / software especializado</option>
               <option value="upgrade">Instalar SSD / RAM / GPU</option>
               <option value="clone">Clonar disco</option>
               <option value="boot">No inicia / falla de Windows</option>
@@ -294,6 +309,10 @@
           <p>Limpieza interna, cambio de pasta térmica y ajustes básicos. No hacemos soldaduras, microsoldadura ni reparación de placas; si detectamos algo fuera de ese alcance, te lo explicamos antes de continuar.</p>
         </details>
         <details>
+          <summary>¿Las licencias vienen incluidas?</summary>
+          <p>No. El precio publicado corresponde a la instalación y configuración. La licencia de Office, Microsoft 365, AutoCAD u otro programa la proporciona el cliente o se cotiza por separado. No instalamos software sin licencia válida.</p>
+        </details>
+        <details>
           <summary>¿El precio mostrado es definitivo?</summary>
           <p>No. Es un punto de partida. Antes de trabajar te confirmamos el alcance, el precio y cualquier pieza necesaria.</p>
         </details>
@@ -333,7 +352,7 @@
         <strong>DescoTech</strong>
         <span>PC · Gaming · IT</span>
       </div>
-      <div>Servicio técnico independiente · <span id="year">2026</span> · v2.7 · <a href="https://descobt-stack.github.io/portfolio-josue/" target="_blank" rel="noopener noreferrer">Portafolio ↗</a></div>
+      <div>Servicio técnico independiente · <span id="year">2026</span> · v2.8 · <a href="https://descobt-stack.github.io/portfolio-josue/" target="_blank" rel="noopener noreferrer">Portafolio ↗</a></div>
     </div>
   </footer>
 
@@ -405,8 +424,8 @@
   </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=2.7" defer></script>
-  <script src="account.js?v=2.7" defer></script>
-  <script src="chat.js?v=2.7" defer></script>
+  <script src="app.js?v=2.8" defer></script>
+  <script src="account.js?v=2.8" defer></script>
+  <script src="chat.js?v=2.8" defer></script>
 </body>
 </html>
