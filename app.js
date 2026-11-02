@@ -14,7 +14,7 @@ document.addEventListener('click', e => { if (!e.target.closest('.nav')) setMenu
 $('year').textContent = new Date().getFullYear();
 const device = $('device'), service = $('service'), mode = $('mode'), details = $('details');
 const prices = {
-  maintenance:{pc:500,laptop:600,console:500,build:500}, windows:{pc:500,laptop:500,console:null,build:500},
+  maintenance:{pc:500,laptop:600,console:500,build:500}, windows:{pc:500,laptop:500,console:null,build:500}, office:{pc:350,laptop:350,console:null,build:350}, autocad:{pc:650,laptop:650,console:null,build:650},
   upgrade:{pc:500,laptop:500,console:null,build:500}, clone:{pc:500,laptop:550,console:null,build:500},
   boot:{pc:500,laptop:550,console:null,build:500}, gaming:{pc:500,laptop:550,console:null,build:500},
   build:{pc:700,laptop:null,console:null,build:700}, obs:{pc:700,laptop:700,console:null,build:700},
@@ -22,6 +22,7 @@ const prices = {
   streamer:{pc:700,laptop:700,console:null,build:700}
 };
 const physical = new Set(['maintenance','upgrade','clone','boot','build','fresh','ready']);
+const licenseRequired = new Set(['office','autocad']);
 const money = value => value == null ? 'Requiere revisión' : `Aprox. desde $${value.toLocaleString('es-MX')} MXN`;
 function message() {
   return ['Hola, quiero solicitar una cotización en DescoTech.', '',
@@ -29,6 +30,7 @@ function message() {
     'Servicio: ' + service.selectedOptions[0].textContent,
     'Modalidad: ' + mode.selectedOptions[0].textContent,
     'Estimado inicial: ' + money(prices[service.value][device.value]),
+    licenseRequired.has(service.value) ? 'Licencia: no incluida; se requiere licencia válida del cliente o cotización aparte.' : '',
     'Detalles: ' + (details.value.trim() || 'Sin detalles adicionales.'), '',
     'Entiendo que el precio final se confirma después del diagnóstico.'].join('\n');
 }
